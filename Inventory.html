@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demand Forecasting System</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h3>Demand Forecasting and Inventory Optimization</h3>
+    <form id="forecastForm">
+      <div class="form-grid">
+        <!-- Your form inputs -->
+        <div class="form-group">
+          <label for="Target Date">Target Date</label>
+          <input type="date" name="Target Date" required />
+        </div>
+        <div class="form-group">
+          <label for="Store ID">Store ID</label>
+          <input type="text" name="Store ID" required />
+        </div>
+        <div class="form-group">
+          <label for="Product ID">Product ID</label>
+          <input type="text" name="Product ID" required />
+        </div>
+        <div class="form-group">
+          <label for="Category">Category</label>
+          <input type="text" name="Category" required />
+        </div>
+        <div class="form-group">
+          <label for="Region">Region</label>
+          <input type="text" name="Region" required />
+        </div>
+        <div class="form-group">
+          <label for="Inventory Level">Inventory Level</label>
+          <input type="number" name="Inventory Level" required />
+        </div>
+        <div class="form-group">
+          <label for="Units Sold">Units Sold</label>
+          <input type="number" name="Units Sold" required />
+        </div>
+        <div class="form-group">
+          <label for="Units Ordered">Units Ordered</label>
+          <input type="number" name="Units Ordered" required />
+        </div>
+        <div class="form-group">
+          <label for="Price">Price</label>
+          <input type="number" name="Price" step="0.01" required />
+        </div>
+        <div class="form-group">
+          <label for="Discount">Discount</label>
+          <input type="number" name="Discount" step="0.01" required />
+        </div>
+        <div class="form-group">
+          <label for="Weather Condition">Weather Condition</label>
+          <input type="text" name="Weather Condition" required />
+        </div>
+        <div class="form-group">
+          <label for="Holiday/Promotion">Holiday/Promotion</label>
+          <input type="text" name="Holiday/Promotion" required />
+        </div>
+        <div class="form-group">
+          <label for="Competitor Pricing">Competitor Pricing</label>
+          <input type="number" name="Competitor Pricing" step="0.01" required />
+        </div>
+        <div class="form-group">
+          <label for="Seasonality">Seasonality</label>
+          <input type="text" name="Seasonality" required />
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Predict the Result</button>
+    </form>
+  </div>
+
+  <!-- Prediction Modal -->
+  <div id="predictionModal" class="modal">
+    <div class="modal-content">
+      <h2 class="modal-title">Prediction Result</h2>
+
+      <div class="result-item">
+        Predicted Demand : <span class="red-text" id="predictedDemand">--</span> Units
+      </div>
+      <div class="result-item">
+        Reorder Quantity : <span id="eoq">--</span> Units
+      </div>
+      <div class="result-item">
+        Reorder Point &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id="rol">--</span> Units
+      </div>
+
+      <hr />
+
+      <div class="modal-title" style="font-size: 18px;">Instructions for the Inventory Manager</div>
+      <div class="instruction-text">
+        You should order: <span class="red-text" id="eoqInstruction">--</span> units
+        When inventory drops to: <span class="red-text" id="rolInstruction">--</span> units
+      </div>
+
+        <hr />
+
+      <button id="closeModal" class="close-button">Close</button>
+    </div>
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="scripts.js"></script>
+</body>
+</html>

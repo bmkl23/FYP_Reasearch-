@@ -1,0 +1,148 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  padding: 30px;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 150%;
+  color: #827d7d;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  background-color: #5f9dbc;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #215c77;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 420px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.modal-title {
+  text-align:justify;
+  margin-bottom: 20px;
+  font-size: 22px;
+
+}
+
+.result-item {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.red-text {
+  color: red;
+
+}
+
+.instruction-text {
+  font-size: 15px;
+  line-height: 1.6;
+  background-color: #fdfdfd;
+  border-left: 4px solid #007bff;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.close-button {
+  display: block;
+  margin: 25px auto 0;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-button:hover {
+  background-color: #c0392b;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px dashed #999;
+}
